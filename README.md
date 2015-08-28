@@ -118,6 +118,27 @@ class ClientName extends Component {
 
 In this example if some other component changed the model the update method would be executed and the view would be updated.
 
+### Model
+
+`Model` class provides an interface to read and write application data.
+On any write in triggers an event which causes application to update all the components.
+
+#### Model#get(path: string, defaultValue: any): any
+
+Provides a way to get data from model.
+
+This method uses [lodash#get](https://lodash.com/docs#get) internally, so you can pass deep path here.
+
+#### Model#set(path: string, value: any): Model
+
+Provides a way to set data to a model. Triggers change event that causes components to update.
+
+This method uses [lodash#set](https://lodash.com/docs#set) internally, so you can pass deep path here.
+
+#### Model#reset(data: any): Model
+
+Provides a way to reset all the model data. Triggers change event that causes components to update.
+
 ## Example
 
 Here is the full example.
