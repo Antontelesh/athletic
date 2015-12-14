@@ -9,6 +9,7 @@ import set from 'lodash/object/set';
 export class Model extends EventEmitter {
 
   constructor() {
+    super();
     this.params = {};
   }
 

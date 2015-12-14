@@ -8,10 +8,6 @@ This library was created as a super lightweight version of a frontend framework.
 
 With this library you are still able to keep being declarative but without a lot of complex features big frameworks provide.
 
-## Usage
-
-The library is written in ES6. All the files have `.es6` extension. They are meant to be compiled by Babel or some other ES6 → ES5 compiler.
-
 ## API
 
 ### App

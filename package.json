@@ -2,9 +2,10 @@
   "name": "athletic",
   "version": "1.0.0",
   "description": "A lightweight library for declarative applications",
-  "main": "index.es6",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel src -d dist"
   },
   "keywords": [
     "library",
@@ -15,6 +16,15 @@
   "author": "Anton Telesh <a.telesh@smcs.com.ua>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^3.10.1"
+    "babel-runtime": "^6.2.0",
+    "lodash": "^3.10.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.3",
+    "babel-plugin-syntax-class-properties": "^6.1.18",
+    "babel-plugin-syntax-decorators": "^6.1.18",
+    "babel-plugin-transform-class-properties": "^6.2.2",
+    "babel-plugin-transform-runtime": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18"
   }
 }
