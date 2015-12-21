@@ -117,7 +117,7 @@ In this example if some other component changed the model the update method woul
 ### Model
 
 `Model` class provides an interface to read and write application data.
-On any write in triggers an event which causes application to update all the components.
+On any write it triggers an event which causes application to update all the components.
 
 #### Model#get(path: string, defaultValue: any): any
 
