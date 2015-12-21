@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## pending
+## 2.0.1
 
 * Fixed `lodash/array/remove` dependency.
 
