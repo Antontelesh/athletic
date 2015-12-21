@@ -1,5 +1,5 @@
 import invoke from 'lodash/collection/invoke';
-import remove from 'lodash/collection/remove';
+import remove from 'lodash/array/remove';
 import {Model} from './Model';
 import {initComponent} from './utils/initComponent';
 import {
