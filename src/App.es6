@@ -66,8 +66,6 @@ export class App {
    * @param  {Component} component
    */
   register(component) {
-    component.app = this;
-    component.model = this.data;
     this.components.push(component);
     this[ELEMENTS].add(component.element);
   }

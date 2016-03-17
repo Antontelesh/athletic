@@ -3,8 +3,10 @@
  */
 export class Component {
 
-  constructor(element) {
+  constructor(element, app, model) {
     this.element = element;
+    this.app = app;
+    this.model = model;
   }
 
   update() {
