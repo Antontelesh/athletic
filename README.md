@@ -1,4 +1,4 @@
-# athletic [![Build Status](https://travis-ci.org/Antontelesh/athletic.svg?branch=develop)](https://travis-ci.org/Antontelesh/athletic)
+# athletic [![Build Status](https://travis-ci.org/Antontelesh/athletic.svg?branch=develop)](https://travis-ci.org/Antontelesh/athletic) [![Coverage Status](https://coveralls.io/repos/github/Antontelesh/athletic/badge.svg?branch=develop)](https://coveralls.io/github/Antontelesh/athletic?branch=develop)
 
 Lightweight JavaScript library for declarative application logic.
 
