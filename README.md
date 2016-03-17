@@ -1,4 +1,4 @@
-# athletic
+# athletic [![Build Status](https://travis-ci.org/Antontelesh/athletic.svg?branch=master)](https://travis-ci.org/Antontelesh/athletic)
 
 Lightweight JavaScript library for declarative application logic.
 
