@@ -19,7 +19,7 @@ It is recommended to have only one instance to prevent data sharing issues.
 
 There is native way to instantiate an `App`:
 
-```
+```js
 import {App} from 'athletic';
 var app = new App();
 ```
@@ -30,7 +30,7 @@ This method registers application model with data passed in an argument.
 
 Example:
 
-```
+```js
 import {App} from 'athletic';
 var app = new App();
 
@@ -47,7 +47,7 @@ After an application bootstrap all registered components within an application r
 
 It is better to explain this in example:
 
-```
+```js
 import {App} from 'athletic';
 import {ClientName} from './components';
 var app = new App();
@@ -66,7 +66,7 @@ This method returns `App` instance itself to support method chaining.
 This method instantiates all registered components within root element.
 One element can hold only one component. Component can't be reinstantiated on an existing element.
 
-```
+```js
 import {App} from 'athletic';
 import {ClientName} from './components';
 var app = new App();
@@ -81,7 +81,7 @@ app
 
 `Component` is an abstract class to extend your components from. It holds a piece of logic bound to an element. Every component stores links to `app`, its `element` and application `model` so you can reach any of them inside your component class:
 
-```
+```js
 class ClientName extends Component {
     
     constructor(...args) {
@@ -98,7 +98,7 @@ class ClientName extends Component {
 
 This is the main method of any component. It is being called every time the application model changes. You can place any logic here.
 
-```
+```js
 class ClientName extends Component {
 
     update() {
@@ -139,7 +139,7 @@ Provides a way to reset all the model data. Triggers change event that causes co
 
 Here is the full example.
 
-```
+```js
 import {App, Component} from 'athletic';
 var app = new App();
 
