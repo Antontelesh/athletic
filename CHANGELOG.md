@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## pending
+
+* Fixed #4. `App` and `Model` instances now available in `Component` constructor.
+
 ## 2.0.1
 
 * Fixed `lodash/array/remove` dependency.
