@@ -1,4 +1,5 @@
 node_modules
-dist
+# dist
+src
 .DS_Store
 .nyc_output
