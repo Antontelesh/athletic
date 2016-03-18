@@ -3,6 +3,8 @@
 ## pending
 
 * Fixed #4. `App` and `Model` instances now available in `Component` constructor.
+* Updated lodash package to 4.6.1
+* Fixed component update event trigger
 
 ## 2.0.1
 

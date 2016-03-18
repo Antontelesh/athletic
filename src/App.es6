@@ -1,5 +1,5 @@
-import invoke from 'lodash/collection/invoke';
-import remove from 'lodash/array/remove';
+import invokeMap from 'lodash/invokeMap';
+import remove from 'lodash/remove';
 import {Model} from './Model';
 import {initComponent} from './utils/initComponent';
 import {
@@ -58,7 +58,7 @@ export class App {
    * Invokes all components' `update` function
    */
   update() {
-    invoke(this.components, 'update');
+    invokeMap(this.components, 'update');
   }
 
   /**
