@@ -3,6 +3,7 @@
 ## pending
 
 * Fixed package author email (#16)
+* Fixed docs (#17)
 
 ## 3.0.1
 
@@ -26,7 +27,7 @@ Here is the full list of API changes:
   This lifecycle hook can be used to remove all event listeners registered in a component.
 * `App#model` now accepts not an actual data object, but an instance of `Model`.
   `Model` is another factory exported from `athletic`.
-  It's intended to being called without the `new` keyword.
+  It's intended to be called without the `new` keyword.
   You can pass your data to the factory function when creating an instance of `Model`:
 
   ```typescript

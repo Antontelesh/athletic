@@ -40,9 +40,7 @@ Example:
 import {App, Model} from 'athletic';
 
 var model = Model({first_name: 'John', last_name: 'Doe'});
-var app = new App();
-
-app.model(model);
+App().model(model);
 ```
 
 This method returns `App` instance itself to support method chaining.
