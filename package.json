@@ -2,15 +2,23 @@
   "name": "athletic",
   "version": "2.1.0",
   "description": "A lightweight library for declarative applications",
-  "main": "dist/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:Antontelesh/athletic.git"
   },
   "scripts": {
-    "test": "nyc --extension .es6 node ./test/index.js",
+    "clean:test": "rm -rf ./build_test",
+    "clean:typescript": "rm -rf ./dist",
+    "test:prepare": "npm run clean:test && npm run compile:test",
+    "test:unit": "node ./build_test/test/index.js",
+    "pretest": "npm run test:prepare",
+    "test": "nyc node ./build_test/test/index.js",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "compile": "babel src -d dist"
+    "compile:test": "tsc -p ./test --outDir ./build_test",
+    "compile:typescript": "tsc -p ./src --outDir ./dist",
+    "compile:rollup": "rollup -c",
+    "compile": "npm run clean:typescript && npm run compile:typescript && npm run compile:rollup"
   },
   "keywords": [
     "library",
@@ -21,25 +29,21 @@
   "author": "Anton Telesh <a.telesh@smcs.com.ua>",
   "license": "MIT",
   "dependencies": {
-    "babel-runtime": "^6.2.0",
     "lodash": "^4.6.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.6.5",
-    "babel-eslint": "^4.1.3",
-    "babel-plugin-syntax-class-properties": "^6.1.18",
-    "babel-plugin-syntax-decorators": "^6.1.18",
-    "babel-plugin-transform-class-properties": "^6.2.2",
-    "babel-plugin-transform-runtime": "^6.1.18",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-register": "^6.7.2",
+    "babel-preset-es2015-rollup": "^1.1.1",
     "coveralls": "^2.11.8",
     "nyc": "^6.1.1",
-    "tape": "^4.5.1"
+    "rollup": "^0.25.8",
+    "rollup-plugin-babel": "^2.4.0",
+    "tape": "^4.5.1",
+    "typescript": "^1.8.9"
   },
+  "typings": "dist/index.d.ts",
   "nyc": {
-    "extension": [
-      ".es6"
+    "include": [
+      "build_test/src/**/*.js"
     ]
   }
 }

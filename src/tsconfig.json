@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es6",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "declaration": true
+    },
+    "compileOnSave": false,
+    "files": [
+      "./index.ts",
+      "./typings/browser.d.ts"
+    ]
+}
