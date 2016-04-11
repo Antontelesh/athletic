@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## pending
+## 3.0.2
 
 * Fixed package author email (#16)
 * Fixed docs (#17)
