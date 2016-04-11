@@ -26,7 +26,7 @@
     "declarative",
     "component"
   ],
-  "author": "Anton Telesh <a.telesh@smcs.com.ua>",
+  "author": "Anton Telesh <telesh91@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.6.1"
