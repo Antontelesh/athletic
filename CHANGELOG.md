@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## pending
+## 3.0.0
 
 This release is a full rewrite.
 The library has been totally rewritten in TypeScript.
