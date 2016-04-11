@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## pending
+## 3.0.1
 
 * Fixed docs (issue #13)
 
