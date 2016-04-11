@@ -1,6 +1,8 @@
 node_modules
-dist
+# dist
+# index.js
+src
+test
 .DS_Store
 .nyc_output
 build_test
-index.js
