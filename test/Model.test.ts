@@ -52,5 +52,18 @@ test('Model', t => {
     t.end();
   });
 
+  t.test('getState()', t => {
+
+    let model = Model({prop: 'value'});
+
+    t.deepEqual(model.getState(), {prop: 'value'});
+
+    model.set('prop', 'value1');
+
+    t.deepEqual(model.getState(), {prop: 'value1'});
+
+    t.end();
+  });
+
   t.end();
 });
