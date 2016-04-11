@@ -1,6 +1,6 @@
 {
   "name": "athletic",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A lightweight library for declarative applications",
   "main": "index.js",
   "repository": {
