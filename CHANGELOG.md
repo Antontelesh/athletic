@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## pending
+
+* Fixed docs (issue #13)
+
 ## 3.0.0
 
 This release is a full rewrite.

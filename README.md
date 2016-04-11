@@ -62,11 +62,10 @@ import {App, Model, Component} from 'athletic';
 class ClientName extends Component {...}
 
 var model = Model({first_name: 'John', last_name: 'Doe'});
-var app = new App();
 
-app
-    .model(model)
-    .component('.client-name', ClientName);
+App()
+  .model(model)
+  .component('.client-name', ClientName);
 ```
 
 To read more about components look at `Component` API.
@@ -88,9 +87,9 @@ import {ClientName} from './components';
 var model = Model({first_name: 'John', last_name: 'Doe'});
 
 var destroy = App()
-    .model(model)
-    .component('.client-name', ClientName)
-    .bootstrap(document.body);
+  .model(model)
+  .component('.client-name', ClientName)
+  .bootstrap(document.body);
 
 // somewhere later
 destroy();
@@ -107,11 +106,11 @@ import {Component} from 'athletic';
 
 class ClientName extends Component {
 
-    constructor(element, model) {
-        super(element, model);
-        console.log(this.element); // => prints an element this instance bound to
-        console.log(this.model); // => prints an instance of `Model` holding application data
-    }
+  constructor(element, model) {
+    super(element, model);
+    console.log(this.element); // => prints an element this instance bound to
+    console.log(this.model); // => prints an instance of `Model` holding application data
+  }
 
 }
 ```
@@ -125,13 +124,13 @@ import {Component} from 'athletic';
 
 class ClientName extends Component {
 
-    update() {
-        var first_name = this.model.get('first_name'),
-            last_name = this.model.get('last_name'),
-            full_name = `${first_name} ${last_name}`;
+  update() {
+    var first_name = this.model.get('first_name'),
+        last_name = this.model.get('last_name'),
+        full_name = `${first_name} ${last_name}`;
 
-        this.element.textContent = full_name;
-    }
+    this.element.textContent = full_name;
+  }
 
 }
 ```
@@ -192,40 +191,40 @@ import {App, Component, Model} from 'athletic';
 
 class NameChanger extends Component {
 
-    constructor(element, model) {
-        super(element, model);
+  constructor(element, model) {
+    super(element, model);
 
-        this.clickListener = () => {
-            this.model.set('client.last_name', 'Smith');
-        };
-        this.element.addEventListener('click', this.clickListener);
-    }
+    this.clickListener = () => {
+      this.model.set('client.last_name', 'Smith');
+    };
+    this.element.addEventListener('click', this.clickListener);
+  }
 
-    onDestroy() {
-        this.element.removeEventListener('click', this.clickListener);
-    }
+  onDestroy() {
+    this.element.removeEventListener('click', this.clickListener);
+  }
 
 }
 
 class ClientName extends Component {
 
-    update() {
-        var first_name = this.model.get('first_name'),
-            last_name = this.model.get('last_name'),
-            full_name = `${first_name} ${last_name}`;
+  update() {
+    var first_name = this.model.get('first_name'),
+        last_name = this.model.get('last_name'),
+        full_name = `${first_name} ${last_name}`;
 
-        this.element.textContent = full_name;
-    }
+    this.element.textContent = full_name;
+  }
 
 }
 
 const model = Model({client: {first_name: 'John', last_name: 'Doe'}});
 
 App()
-    .model(model)
-    .component('.name-changer', NameChanger)
-    .component('.client-name', ClientName)
-    .bootstrap(document.body);
+  .model(model)
+  .component('.name-changer', NameChanger)
+  .component('.client-name', ClientName)
+  .bootstrap(document.body);
 ```
 
 The application loads representing a text "John Doe" and a button.
